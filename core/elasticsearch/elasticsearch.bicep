@@ -8,6 +8,7 @@ param emailAddress string
 param country string
 param domain string
 param sku string
+param version string
 
 resource elasticsearchmonitor 'Microsoft.Elastic/monitors@2022-07-01-preview' = {
   name: monitorName
@@ -26,7 +27,7 @@ resource elasticsearchmonitor 'Microsoft.Elastic/monitors@2022-07-01-preview' = 
       firstName: firstName
       lastName: lastName
     }
-    version: '8.10.4'
+    version: version
   }
 }
 

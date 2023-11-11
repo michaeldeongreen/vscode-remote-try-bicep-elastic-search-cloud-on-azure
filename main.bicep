@@ -34,6 +34,9 @@ param domain string
 @description('Elastic Search monitor sku.')
 param sku string = 'ess-consumption-2024_Monthly@TIDgmz7xq9ge3py'
 
+@description('Elastic Search monitor version.')
+param version string = '8.10.4'
+
 module elasticsearch 'core/elasticsearch/elasticsearch.bicep' = {
   name: 'elasticsearch'
   params: {
@@ -46,5 +49,6 @@ module elasticsearch 'core/elasticsearch/elasticsearch.bicep' = {
     country: country
     domain: domain
     sku: sku
+    version: version
   }
 }
